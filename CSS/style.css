@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0c0c0c;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+
+  .logo h1 {
+    margin: 10px 0 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  .description {
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 10px 0 20px;
+    max-width: 400px;
+  }
+
+  .confronto {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .confronto span {
+    font-size: 1rem;
+  }
+
+  .button {
+    background-color: #1a1a1a;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 15px;
+    margin: 10px 0;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .button img {
+    width: 40px;
+    height: auto;
+  }
+
+  @media (max-width: 480px) {
+    .logo h1 {
+      font-size: 1.2rem;
+    }
+
+    .button {
+      font-size: 1rem;
+      padding: 12px;
+    }
+
+    .button img {
+      width: 30px;
+    }
+  }
