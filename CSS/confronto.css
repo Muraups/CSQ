@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1000px;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  }
+
+  .header {
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    background: #000;
+  }
+
+  .versus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    font-weight: bold;
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .versus div {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  @media(min-width: 600px) {
+    .versus div {
+      flex: 1;
+    }
+  }
+
+  .protecao {
+    background-color: #4CAF50;
+    color: #fff;
+  }
+
+  .ataque {
+    background-color: #F44336;
+    color: #fff;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid #444;
+  }
+
+  .col {
+    flex: 1 1 100%;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 1px solid #444;
+    text-align: center;
+  }
+
+  @media(min-width: 600px) {
+    .col {
+      flex: 1;
+      border-right: 1px solid #444;
+    }
+    .col:last-child {
+      border-right: none;
+    }
+  }
+
+  .row:last-child .col {
+    border-bottom: none;
+  }
