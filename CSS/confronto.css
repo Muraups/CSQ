@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 body {
@@ -13,80 +11,68 @@ body {
   justify-content: center;
 }
 
-.container {
+.duelo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   width: 100%;
   max-width: 1000px;
-  background: #000;
+}
+
+.ataque-container, .protecao-container {
+  flex: 1 1 48%;
+  background: #222;
+  color: white;
+  font-family: Arial, sans-serif;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 }
 
-.header {
-  text-align: center;
-  padding: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  background: #000;
+.ataque-container {
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
-.versus {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #222;
-  font-weight: bold;
-  padding: 10px;
-  flex-wrap: wrap;
-}
-
-.versus div {
-  flex: 1 1 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-@media (min-width: 600px) {
-  .versus div {
-      flex: 1;
-  }
-}
-
-.protecao {
-  background-color: #4CAF50;
-  color: #fff;
-}
-
-.ataque {
+.ataque-titulo {
   background-color: #F44336;
-  color: #fff;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  border-top: 1px solid #444;
-}
-
-.col {
-  flex: 1 1 100%;
-  padding: 15px;
-  border-right: none;
-  border-bottom: 1px solid #444;
   text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
-@media (min-width: 600px) {
-  .col {
-      flex: 1;
-      flex-basis: 0; /* Adicionado para garantir que as colunas ocupem o espaço igualmente */
-  }
-
-  .col:last-child {
-      border-right: none;
-  }
+.protecao-titulo {
+  background-color: #4CAF50;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
 }
 
-.row:last-child .col {
+.ataque-lista, .protecao-lista {
+  padding: 10px;
+}
+
+.ataque-item, .protecao-item {
+  background-color: #333;
+  padding: 15px;
+  margin-bottom: 5px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+
+.ataque-item:last-child, .protecao-item:last-child {
   border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  .duelo {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .ataque-container, .protecao-container {
+      flex: 1 1 100%;
+      width: 100%;
+      margin: 0;
+  }
 }
