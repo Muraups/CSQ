@@ -9,55 +9,92 @@ body {
   padding: 20px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-voltar {
+  position: absolute;
+  left: 20px;
+  background-color: #444;
+  color: white;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+  background-color: #666;
+}
+
+.titulo-principal {
+  font-size: 32px;
+  margin: 0;
 }
 
 .duelo {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   width: 100%;
   max-width: 1000px;
+  margin: 0 auto;
 }
 
 .ataque-container, .protecao-container {
-  flex: 1 1 48%;
   background: #222;
   color: white;
-  font-family: Arial, sans-serif;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+  display: grid;
+  grid-template-rows: auto 1fr;
 }
 
 .ataque-container {
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
-.ataque-titulo {
-  background-color: #F44336;
+.ataque-titulo, .protecao-titulo {
   text-align: center;
   padding: 10px;
   font-weight: bold;
+}
+
+.ataque-titulo {
+  background-color: #F44336;
 }
 
 .protecao-titulo {
   background-color: #4CAF50;
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
 }
 
 .ataque-lista, .protecao-lista {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
   padding: 10px;
+  gap: 5px;
 }
 
 .ataque-item, .protecao-item {
   background-color: #333;
   padding: 15px;
-  margin-bottom: 5px;
   text-align: center;
   border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .ataque-item:last-child, .protecao-item:last-child {
@@ -65,14 +102,42 @@ body {
 }
 
 @media (max-width: 600px) {
+  body {
+    display: block;
+    padding: 10px;
+  }
+
+  .topo {
+    flex-direction: column;
+    position: static;
+  }
+
+  .btn-voltar {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .titulo-principal {
+    font-size: 24px;
+  }
+
   .duelo {
-      flex-direction: column;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .ataque-container, .protecao-container {
-      flex: 1 1 100%;
-      width: 100%;
-      margin: 0;
+    width: 100%;
+    margin: 0;
+    display: block;
+  }
+
+  .ataque-lista, .protecao-lista {
+    display: block;
+  }
+
+  .ataque-item, .protecao-item {
+    display: block;
   }
 }
