@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/manual-casas.css" />
+    <title>Manual das Casas do Tabuleiro - CyberSecurity Quest</title>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-button">&laquo;</a>
+        <h1>Manual das Casas do Tabuleiro – CyberSecurity Quest</h1>
+    </div>
+
+    <div class="content">
+        <div class="house-section">
+            <h2> Casas Especiais (posicionadas nos cantos do tabuleiro)</h2>
+            <h3>Início – Hack Aleatório </h3>
+            <button class="show-image-button" data-image="imagens/inicio.png">Ver Imagem</button>
+            <p>Ao passar ou cair nesta casa, o jogador rola o dado:</p>
+            <ul>
+                <li>1–2: Ganha 1 carta de proteção</li>
+                <li>3–4: Perde 1 carta de proteção (se tiver)</li>
+                <li>5–6: Perde 1 Crédito de Segurança</li>
+            </ul>
+        </div>
+
+        <div class="house-section">
+            <h3>Férias Virtuais </h3>
+            <button class="show-image-button" data-image="imagens/ferias-virtuais.png">Ver Imagem</button>
+            <p>O jogador descansa! Fica 1 rodada sem jogar, sem penalidades.</p>
+        </div>
+
+        <div class="house-section">
+            <h3>Prisão de Ransomware </h3>
+            <button class="show-image-button" data-image="imagens/prisao-ransomware.png">Ver Imagem</button>
+            <p>O jogador fica 1 rodada sem jogar e precisa pagar 1 Crédito de Segurança para sair.</p>
+        </div>
+
+        <div class="house-section">
+            <h3>Deep Web ️</h3>
+            <button class="show-image-button" data-image="imagens/deep-web.png">Ver Imagem</button>
+            <p>Ao cair nesta casa, o jogador perde 1 Crédito de Segurança automaticamente. Não perde rodadas.</p>
+        </div>
+
+        <div class="house-section">
+            <h2> Casas de Desafio</h2>
+            <button class="show-image-button" data-image="imagens/casa-desafio.png">Ver Imagem</button>
+            <p>Nestas casas, o jogador saca uma Carta de Desafio e responde uma pergunta de múltipla escolha:</p>
+            <ul>
+                <li>Se acertar: Encerra a rodada</li>
+                <li>Se errar: Perde 1 Crédito de Segurança</li>
+            </ul>
+        </div>
+
+        <div class="house-section">
+            <h2>⚠️ Casas de Ataque Hacker</h2>
+            <button class="show-image-button" data-image="imagens/casa-ataque-hacker.png">Ver Imagem</button>
+            <p>O jogador saca uma Carta de Ataque Hacker:</p>
+            <ul>
+                <li>Se possuir a Carta de Proteção correspondente ao ataque, pode usá-la e se defender.</li>
+                <li>Se não possuir, sofre o efeito do ataque: perde 1 Crédito de Segurança.</li>
+            </ul>
+        </div>
+
+        <div class="house-section">
+            <h2>️ Centro de Defesa Digital</h2>
+            <button class="show-image-button" data-image="imagens/centro-defesa-digital.png">Ver Imagem</button>
+            <p>O jogador saca 1 Carta de Proteção aleatória, que pode ser usada futuramente para se proteger de um ataque hacker.</p>
+        </div>
+
+        <div class="house-section">
+            <h2>⚔️ Casa do X1 Cibernético</h2>
+            <button class="show-image-button" data-image="imagens/casa-x1-cibernetico.png">Ver Imagem</button>
+            <p>O jogador desafia outro jogador à sua escolha:</p>
+            <ul>
+                <li>O desafiante saca uma Carta de Ataque Hacker e ataca o adversário.</li>
+                <li>O desafiado pode se defender com uma Carta de Proteção compatível.</li>
+                <li>Se não tiver, sofre o efeito da carta (perde 1 Crédito).</li>
+            </ul>
+        </div>
+
+        <div class="house-section">
+            <h2>◻️ Casas Neutras</h2>
+            <button class="show-image-button" data-image="imagens/casa-neutra.png">Ver Imagem</button>
+            <p>Não acontece nada. O jogador apenas permanece ou passa pela casa.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img src="imagens/Logo.png" alt="Logo" />
+    </div>
+
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script src="JS/manual-casas.js"></script>
+</body>
+</html>
